@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": 1765342968409,
+      "name": "HARI PRAKASH S",
+      "dob": "2003-09-21",
+      "gender": "Male",
+      "state": "Tamil Nadu",
+      "city": "vnr",
+      "pincode": "626004"
+    },
+    {
+      "id": 1765343013547,
+      "name": "Ram",
+      "dob": "2003-05-22",
+      "gender": "Male",
+      "state": "Narora",
+      "city": "nazora",
+      "pincode": "123980"
+    }
+  ]
+}

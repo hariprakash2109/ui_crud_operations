@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student CRUD App</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f5f2e7; margin: 0; }
+    
+    h2 { text-align: center; color: #333; }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container input,
+    .form-container select {
+      padding: 10px;
+      margin: 5px;
+      flex: 1 1 150px;
+      min-width: 120px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container button {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      flex: 1 1 100px;
+    }
+
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+
+    .student-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .student-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .student-card span {
+      font-weight: bold;
+    }
+
+    .student-card .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .student-card .actions button {
+      flex: 1;
+      margin: 0 2px;
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .edit-btn { background-color: #ff9800; color: white; }
+    .edit-btn:hover { background-color: #e68900; }
+
+    .delete-btn { background-color: #f44336; color: white; }
+    .delete-btn:hover { background-color: #d32f2f; }
+
+    @media(max-width: 600px){
+      .form-container { flex-direction: column; }
+      .student-card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student CRUD App</h2>
+
+  <div class="form-container">
+    <input type="text" id="name" placeholder="Enter name">
+    <input type="date" id="dob">
+    <select id="gender">
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <select id="state">
+      <option value="">Loading States...</option>
+    </select>
+
+    <input type="text" id="city" placeholder="City">
+    <input type="number" id="pincode" placeholder="Pincode">
+
+    <button id="submitBtn">Add Student</button>
+  </div>
+
+  <div class="student-container" id="studentList"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

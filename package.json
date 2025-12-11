@@ -1,0 +1,12 @@
+{
+  "name": "my-ui-app-template",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server src -c-1",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "my-ui-framework": "^1.0.0"
+  }
+}
